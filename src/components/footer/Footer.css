@@ -1,0 +1,22 @@
+.footer-container {
+  background-image: linear-gradient(to right, #3f51b5, #64b5f6);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  padding: 3rem 4rem;
+}
+
+.footer-section {
+  width: 17rem;
+}
+
+.icon-size {
+  font-size: 1.8rem;
+  margin-right: 4px;
+}
+
+.block {
+  display: block;
+}

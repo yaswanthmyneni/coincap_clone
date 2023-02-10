@@ -1,0 +1,40 @@
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+.loading {
+  margin-top: 8rem;
+}
+
+.error {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.table-position {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -7rem;
+}
+
+.table-border {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 8px;
+}
+
+.btn {
+  text-align: center;
+  margin: 2rem 0;
+}

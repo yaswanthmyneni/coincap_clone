@@ -1,0 +1,21 @@
+.text-align {
+  text-align: center;
+}
+
+.info-container {
+  background-image: linear-gradient(to right, #3f51b5, #64b5f6);
+  color: white;
+  padding-bottom: 8.5rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+section .pt-2rem {
+  padding-top: 2rem;
+}
