@@ -39,3 +39,9 @@ p {
   text-align: center;
   margin: 2rem 0;
 }
+
+@media only screen and (max-width: 425px) {
+  .table-position {
+    width: 100%;
+  }
+}

@@ -8,6 +8,14 @@
   padding-bottom: 8.5rem;
 }
 
+.mobile-view {
+  display: none;
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+}
+
 h2 {
   margin: 0;
 }
@@ -18,4 +26,18 @@ h4 {
 
 section .pt-2rem {
   padding-top: 2rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .mobile-view {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  section .pt-2rem {
+    display: none;
+  }
 }

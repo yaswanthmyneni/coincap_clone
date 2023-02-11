@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { MdSettings, MdSearch } from "../../assets/icons/icons";
+import {
+  MdSettings,
+  MdSearch,
+  GiHamburgerMenu,
+} from "../../assets/icons/icons";
 import "./NavigationBar.css";
 
 class NavigationBar extends Component {
@@ -23,6 +27,7 @@ class NavigationBar extends Component {
             <MdSearch />
             <MdSettings />
           </div>
+          <GiHamburgerMenu className="hamburger-icon" />
         </div>
       </header>
     );

@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Home extends React.Component {
-  state = { data: [] };
+  state = { data: [], screenWidth: 0 };
 
   precision = (string) => {
     let val = string.split(".")[0];
@@ -73,6 +73,9 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.props.dataFetch();
+    this.setState(() => {
+      return { screenWidth: window.window.screen.availWidth };
+    });
   }
 
   componentDidUpdate(_, prevState) {
@@ -91,6 +94,7 @@ class Home extends React.Component {
         key: "rank",
         sorter: (a, b) => a.rank - b.rank,
         width: 100,
+        responsive: ["md"],
       },
       {
         title: "Name",
@@ -115,7 +119,6 @@ class Home extends React.Component {
         dataIndex: "priceUsd",
         key: "priceUsd",
         width: 120,
-
         render: (price) => {
           return <p key={price}>${Number(price).toFixed(2)}</p>;
         },
@@ -159,7 +162,6 @@ class Home extends React.Component {
         dataIndex: "changePercent24Hr",
         key: "changePercent24Hr",
         width: 100,
-        responsive: ["md"],
         render: (changePercent24Hr) => {
           let val = changePercent24Hr.split(".")[0];
           let decimal = changePercent24Hr.split(".")[1];
@@ -199,9 +201,7 @@ class Home extends React.Component {
                 dataSource={this.state.data}
                 className="table-border"
                 pagination={false}
-                scroll={{
-                  x: 1010,
-                }}
+                scroll={this.state.screenWidth < 420 ? { x: 420 } : { x: 1010 }}
               />
             </div>
             {this.state.data.length !== 100 && (

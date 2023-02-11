@@ -8,12 +8,14 @@
 
 .header-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 1rem 0;
 }
 
 .links-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -21,4 +23,27 @@
   width: 6rem;
   height: 2.5rem;
   margin: 0 auto;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .links-container {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
 }
